@@ -19,7 +19,20 @@ const employeeRoutes = require('./routes/employeeRoutes');
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "app.use(cors({
+  origin: "https://restaurant-bill-generate-1.onrender.com", 
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));", // your frontend live link
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+app.use(cors({
+  origin: "https://restaurant-bill-generate-1.onrender.com", // your frontend live link
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Connect to the database
